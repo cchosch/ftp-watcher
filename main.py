@@ -237,10 +237,13 @@ class MultiFileHandler(FileSystemEventHandler):
 
     def _maybe_upload(self, event_path):
         changed = os.path.abspath(event_path)
-        if changed in self.target_paths:
-            rel = os.path.relpath(changed, self.project_root)
-            t = threading.Thread(target=upload_file, args=(self.project_root, rel, self.cfg))
-            t.start()
+        print("MAYBE UP:")
+        for p in self.target_paths:
+            if pathlib.Path(changed).match(p):
+                rel = os.path.relpath(changed, self.project_root)
+                t = threading.Thread(target=upload_file, args=(self.project_root, rel, self.cfg))
+                t.start()
+                break
             
 
     def on_modified(self, event):
