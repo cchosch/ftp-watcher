@@ -237,7 +237,6 @@ class MultiFileHandler(FileSystemEventHandler):
 
     def _maybe_upload(self, event_path):
         changed = os.path.abspath(event_path)
-        print("MAYBE UP:")
         for p in self.target_paths:
             if pathlib.Path(changed).match(p):
                 rel = os.path.relpath(changed, self.project_root)
