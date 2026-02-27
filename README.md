@@ -30,7 +30,7 @@ _____________
 
 <small>**Note: file paths listed under `transferFiles` are globs**</small>
 
-```json
+```jsonc
 {
     // optional
     "port": 22,
@@ -52,13 +52,13 @@ _____________
 ## Usage
 Then the usage of this script is as follows:
 
-```python
+```shell
 python3 main.py <project_directory>
 ```
 
 For example:
 
-```python
+```shell
 python3 main.py ~/workspace/project_with_transfer_files
 ```
 
