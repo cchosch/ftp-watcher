@@ -15,16 +15,15 @@ it's not a requirement. If you are using it, just append
 
 
 #### `<watched_project>/.vscode/sftp.json` Schema
-|   Field Name    | Required |     Type      |
-|-----------------|----------|---------------|
-|          `host` |       ✅ |      `string` |
-|      `username` |       ✅ |      `string` |
-|      `password` |       ✅ |      `string` |
-|    `remotePath` |       ✅ |      `string` |
-| `transferFiles` |       ✅ |    `string[]` |
-|          `port` |       ❌ |      `number` |
-|      `protocol` |       ❌ | `ftp \| sftp` |
-_____________
+|   Field Name    | Required |     Type      | Default|
+|-----------------|----------|---------------|--------|
+|          `host` |       ✅ |      `string` |        |
+|      `username` |       ✅ |      `string` |        |
+|      `password` |       ✅ |      `string` |        |
+|    `remotePath` |       ✅ |      `string` |        |
+| `transferFiles` |       ✅ |    `string[]` |        |
+|          `port` |       ❌ |      `number` |     22 |
+|      `protocol` |       ❌ | `ftp \| sftp` |  `ftp` |
 
 <br>
 
